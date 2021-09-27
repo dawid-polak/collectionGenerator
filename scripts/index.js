@@ -111,10 +111,6 @@ const add = () => {
 
     const dataObj = new CreateObjData(...allData);
 
-    
-    console.log(dataObj);
-   
-    
     writeDataToPdf(dataObj);
     writeDataToLiveEffect(dataObj);
 
@@ -226,8 +222,14 @@ btnBack.addEventListener('click', () => {
 
 //function render pdf
 const renderPdf = () => {
-    const pdf = document.querySelector('.pdf')
-    html2pdf(pdf);
+    const pdf = document.querySelector('.pdf');
+    var opt = {
+        filename:     'harmonogram-zbiórek.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+    html2pdf(pdf, opt);
 };
 // lisener all btns
 divWithAllBtns.addEventListener('click', (e) => {
