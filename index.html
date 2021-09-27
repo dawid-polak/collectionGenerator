@@ -17,7 +17,9 @@
 
 <body>
     <div class="pdf--wrapper">
-        <!-- <div class="pdf--wrapper-clouse">dsfa<i class="fas fa-times"></i></div> -->
+        <div class="pdf--wrapper-clouse">
+            <span>wróć</span>
+        </div>
         <div class="pdf">
             <div class="spacer--1"></div>
             <div class="pdf--title">
@@ -40,76 +42,78 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="creator--title">
+            <h1>Kreator harmonogramu zbiórek</h1>
+        </div>
 
-    <div class="creator--title">
-        <h1>Kreator harmonogramu zbiórek</h1>
-    </div>
+        <div class="creator--wrapper">
+            <div class="creator--form">
+                <div class="creator--form-row creator--form-row_2">
+                    <div>
+                        <span>Miesiąc</span> <br>
+                        <input class="input" id="creator--form-month" type="text" placeholder="Wrzesień">
+                    </div>
+                    <div>
+                        <span>Rok</span> <br>
+                        <input class="input" id="creator--form-year" type="number" value="2021" placeholder="2021">
+                    </div>
+                </div>
+                <div class="creator--form-row creator--form-row_2">
+                    <div>
+                        <span>Data</span> <br>
+                        <input class="input" id="creator--form-date" type="date">
+                    </div>
+                    <div class="div--checkbox">
+                        <input class="checkbox" id="creator--form-group_collection" type="checkbox">
+                        <span>Zbiórka grupowa</span>
+                    </div>
+                </div>
+                <div class="creator--form-row creator--form-row_2">
+                    <div>
+                        <span>Godzina</span> <br>
+                        <input class="input" id="creator--form-time" type="time">
+                    </div>
+                    <div class="div--checkbox">
+                        <input class="checkbox" id="creator--form-data_zoom" type="checkbox">
+                        <span>Dodaj dane zooma</span>
+                    </div>
+                </div>
+                <div class="creator--form-row">
+                    <div>
+                        <span>Lokalizacja</span> <br>
+                        <input class="input" id="creator--form-location" type="text" placeholder="ul. Główna 26 Brzeźnica Jan Kowalski tel. 777 887 999 / zoom">
+                    </div>
+                </div>
+                <div class="creator--form-row">
+                    <div>
+                        <span>Prowadzący</span> <br>
+                        <input class="input" id="creator--form-chairman" type="text" placeholder="Jan Kowalski">
+                    </div>
+                </div>
 
-    <div class="creator--wrapper">
-        <div class="creator--form">
-            <div class="creator--form-row creator--form-row_2">
-                <div>
-                    <span>Miesiąc</span> <br>
-                    <input class="input" id="creator--form-month" type="text" placeholder="Wrzesień">
-                </div>
-                <div>
-                    <span>Rok</span> <br>
-                    <input class="input" id="creator--form-year" type="number" value="2021" placeholder="2021">
-                </div>
-            </div>
-            <div class="creator--form-row creator--form-row_2">
-                <div>
-                    <span>Data</span> <br>
-                    <input class="input" id="creator--form-date" type="date">
-                </div>
-                <div class="div--checkbox">
-                    <input class="checkbox" id="creator--form-group_collection" type="checkbox">
-                    <span>Zbiórka grupowa</span>
+                <div class="creator--form-btns">
+                    <div class="btns--left">
+                        <button class="btn">zacznij od nowa</button>
+                        <button class="btn">wymaż</button>
+                    </div>
+                    <div class="btns--right">
+                        <button class="btn">dodaj</button>
+                        <button class="btn">zobacz efekt</button>
+                        <button class="btn">zakończ</button>
+                    </div>
                 </div>
             </div>
-            <div class="creator--form-row creator--form-row_2">
-                <div>
-                    <span>Godzina</span> <br>
-                    <input class="input" id="creator--form-time" type="time">
+            <div class="creator--live_effect">
+                <h2>Wpisane dane:</h2>
+                <div class="basic--data">
+                    <h4>Miesiąc: <span class="live_effect-month"></span></h4>
+                    <h4>Rok: <span class="live_effect-year"></span></h4>
                 </div>
-                <div class="div--checkbox">
-                    <input class="checkbox" id="creator--form-data_zoom" type="checkbox">
-                    <span>Dodaj dane zooma</span>
-                </div>
-            </div>
-            <div class="creator--form-row">
-                <div>
-                    <span>Lokalizacja</span> <br>
-                    <input class="input" id="creator--form-location" type="text" placeholder="ul. Główna 26 Brzeźnica Jan Kowalski tel. 777 887 999 / zoom">
-                </div>
-            </div>
-            <div class="creator--form-row">
-                <div>
-                    <span>Prowadzący</span> <br>
-                    <input class="input" id="creator--form-chairman" type="text" placeholder="Jan Kowalski">
-                </div>
-            </div>
-
-            <div class="creator--form-btns">
-                <div class="btns--left">
-                    <button class="btn">zacznij od nowa</button>
-                    <button class="btn">wymaż</button>
-                </div>
-                <div class="btns--right">
-                    <button class="btn">dodaj</button>
-                    <button class="btn">zobacz efekt</button>
-                    <button class="btn">zakończ</button>
-                </div>
+                <div class="creator--main-data"></div>
             </div>
         </div>
-        <div class="creator--live_effect">
-            <h2>Wpisane dane:</h2>
-            <div class="basic--data">
-                <h4>Miesiąc: <span class="live_effect-month"></span></h4>
-                <h4>Rok: <span class="live_effect-year"></span></h4>
-            </div>
-            <div class="creator--main-data"></div>
-        </div>
+        <div></div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

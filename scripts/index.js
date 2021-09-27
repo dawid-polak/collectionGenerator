@@ -35,18 +35,43 @@ const startOver = () => {
 //validator 
 const validator = () => {
     let bolen = false;
-    allInput.forEach(input => {
-        if (input.value === '') {
-            input.classList.add('feedback');
-            setTimeout(() => {
-                input.classList.remove('feedback')
-            }, 3000)
-            bolen = false;
-        } else {
-            bolen = true;
+    let clickBtn;
+
+    allCheckbox.forEach(checkbox => {
+        if(checkbox.id == 'creator--form-group_collection' && checkbox.checked == true) {
+            clickBtn = checkbox.checked;
         };
     });
-    return bolen;
+
+    if (clickBtn == true) {
+        console.log('mam')
+        for (let i = 0; i < 3; i++) {
+            const input = allInput[i];
+            if (input.value === '') {
+                input.classList.add('feedback');
+                setTimeout(() => {
+                    input.classList.remove('feedback')
+                }, 3000);
+                bolen = false;
+            } else {
+                bolen = true; 
+            };
+        };
+        return bolen;
+    } else {
+        allInput.forEach(input => {
+            if (input.value === '') {
+                input.classList.add('feedback');
+                setTimeout(() => {
+                    input.classList.remove('feedback')
+                }, 3000);
+                bolen = false;
+            } else {
+                bolen = true;
+            };
+        });
+        return bolen;
+    }
 };
 
 
@@ -187,11 +212,17 @@ const writeDataToPdf = (data) => {
 const showEffect = () => {
     allBtns.forEach(btn => {
         if(btn.innerText == 'zobacz efekt'){
-           pdfWrapper.style.display= "flex"
+           pdfWrapper.style.display= "flex";
         };
     });
 };
 
+
+//back btn in pdf effect
+const btnBack = document.querySelector('.pdf--wrapper-clouse');
+btnBack.addEventListener('click', () => {
+    pdfWrapper.style.display= "none";
+})
 
 //function render pdf
 const renderPdf = () => {
