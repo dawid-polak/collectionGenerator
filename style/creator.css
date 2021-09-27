@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.feedback {
+    border: 2px solid #8F1722;
+    background-color: rgba(143, 23, 34, 0.3);
+}
+
+.creator--title {
+    text-align: center;
+    width: 100vw;
+    margin-bottom: 1vh;
+}
+
+.creator--wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.creator--form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.creator--form-row {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.creator--form-row_2 {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.input {
+    width: 200px;
+    height: 28px;
+    margin: 0px 25px 25px 0px;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+}
+
+.input:hover {
+    border: 1px solid #193E86;
+}
+
+.div--checkbox {
+    width: 200px;
+    margin: 0px 25px 25px 0px;
+    padding-top: 20px;
+    color: #BC7B2B;
+    font-weight: 700;
+    flex-grow: 1;
+}
+
+#creator--form-location {
+    width: 432px;
+}
+
+.creator--form-btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns--left {
+    margin: 15px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+}
+
+.btns--left .btn {
+    background-color: #8F1722;
+}
+
+.btns--right {
+    margin: 15px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+}
+
+.btns--right .btn:first-child {
+    background-color: #BC7B2B;
+}
+
+.btns--right .btn {
+    background-color: #555E65;
+}
+
+.btn {
+    height: 40px;
+    width: 100px;
+    border: 0px;
+    border-radius: 5px;
+    margin: 5px;
+    color: #FFF;
+    font-weight: 700;
+}
+
+.btn:hover {
+    border: 2px solid #193E86;
+    font-size: 14px;
+}
+
+.creator--live_effect {
+    height: 651px;
+    margin-top: 10px;
+    border: 1px solid #C4C4C4;
+}
+
+.creator--live_effect h2 {
+    margin: 10px;
+    text-align: center;
+}
+
+.basic--data {
+    text-align: left;
+}
+
+.basic--data h4 {
+    margin: 10px 0px 0px 10px;
+}
+
+.creator--main-data {
+    margin: 5px 10px 5px 10px;
+    font-size: 12px;
+}
