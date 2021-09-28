@@ -7,24 +7,6 @@ const liveEffectMainData = document.querySelector('.creator--main-data');
 const pdfWrapper = document.querySelector('.pdf--wrapper');
 
 
-//preloader 
-const preloaderNone = (time) => {
-    setTimeout(() => {
-        preloader.style.display = 'none';
-    }, time)
-};
-window.addEventListener('DOMContentLoaded', preloaderNone(1000));
-
-
-//preloader active
-const preloaderActive = (time) => {
-    preloader.style.display = 'flex';
-    setTimeout(() => {
-        preloader.style.display = 'none';
-    }, time)
-}
-
-
 //clear data from the form
 const removeValueInput = () => {
     allCheckbox.forEach(checkbox => {
@@ -227,7 +209,6 @@ const writeDataToPdf = (data) => {
 
 //function to show effect
 const showEffect = () => {
-    preloaderActive(500);
     allBtns.forEach(btn => {
         if(btn.innerText == 'zobacz efekt'){
            pdfWrapper.style.display= "flex";
