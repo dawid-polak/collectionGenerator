@@ -134,7 +134,7 @@ const writeDataToLiveEffect = (data) => {
         data.location = 'zoom(dane zooma)';
     }
     if (data.groupCollection == true) {
-        p.innerText = `${data.date} -- słuzba w grupach`;
+        p.innerText = `${data.date} -- służba w grupach`;
         liveEffectMainData.appendChild(p);
         return
     }
@@ -189,7 +189,7 @@ const writeDataToPdf = (data) => {
             spanPlace.appendChild(spanAsterisk);
 
             const pdfFooterZoom = document.querySelector('.pdf--footer-zoom');
-            pdfFooterZoom.innerText = '* dane do spotkania na zoomie: ID: 000 000 000 hasło: -';
+            pdfFooterZoom.innerText = '* dane do spotkania na zoomie: ID: 738 704 136 hasło: 1';
         };
     } else {
         const pdfContentRowSaturday = document.createElement('div');
@@ -198,7 +198,7 @@ const writeDataToPdf = (data) => {
         pdfContentRowSaturday.classList.add('pdf--content-row_saturday');
         spanDescription.classList.add('description');
 
-        spanDescription.innerText = 'słuzba w grupach';
+        spanDescription.innerText = 'służba w grupach';
 
         pdfContent.appendChild(pdfContentRowSaturday);
         pdfContentRowSaturday.appendChild(spanDate);
