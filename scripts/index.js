@@ -1,9 +1,28 @@
+const preloader = document.querySelector('.preloader');
 const divWithAllBtns = document.querySelector('.creator--form-btns');
 const allBtns = document.querySelectorAll('.btn')
 const allInput = document.querySelectorAll('.input');
 const allCheckbox = document.querySelectorAll('.checkbox');
 const liveEffectMainData = document.querySelector('.creator--main-data');
 const pdfWrapper = document.querySelector('.pdf--wrapper');
+
+
+//preloader 
+const preloaderNone = (time) => {
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, time)
+};
+window.addEventListener('DOMContentLoaded', preloaderNone(1000));
+
+
+//preloader active
+const preloaderActive = (time) => {
+    preloader.style.display = 'flex';
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, time)
+}
 
 
 //clear data from the form
@@ -23,6 +42,7 @@ const removeValueInput = () => {
     });
 };
 
+
 //start over 
 const startOver = () => {
     if (confirm('Ta czynność spowoduje usunięcie wszytstkich danych. Czy nadal jesteś pewien?')) {
@@ -31,6 +51,7 @@ const startOver = () => {
         return
     };
 };
+
 
 //validator 
 const validator = () => {
@@ -206,6 +227,7 @@ const writeDataToPdf = (data) => {
 
 //function to show effect
 const showEffect = () => {
+    preloaderActive(500);
     allBtns.forEach(btn => {
         if(btn.innerText == 'zobacz efekt'){
            pdfWrapper.style.display= "flex";
@@ -218,7 +240,8 @@ const showEffect = () => {
 const btnBack = document.querySelector('.pdf--wrapper-clouse');
 btnBack.addEventListener('click', () => {
     pdfWrapper.style.display= "none";
-})
+});
+
 
 //function render pdf
 const renderPdf = () => {
@@ -231,6 +254,8 @@ const renderPdf = () => {
       };
     html2pdf(pdf, opt);
 };
+
+
 // lisener all btns
 divWithAllBtns.addEventListener('click', (e) => {
 
@@ -258,5 +283,4 @@ divWithAllBtns.addEventListener('click', (e) => {
         default:
             break;
     };
-
 });
